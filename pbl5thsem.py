@@ -566,25 +566,3 @@ with gr.Blocks(
     generate_btn.click(ui_generate_captions, inputs=[audio_input, video_input, context_input], outputs=output)
 
 demo.launch(share=True)
-
-'''with gr.Blocks(css="""
-     body { background-color: #F5F5F5; font-family: Arial, sans-serif; color: #333; }
-    .gr-markdown h1 { color: #007BFF; text-align: center; }
-    .gr-button { background-color: #007BFF; color: white; border-radius: 5px; padding: 10px; }
-    .gr-textbox { border: 1px solid #007BFF; border-radius: 5px; }
-    .gr-audio, .gr-video { border: 2px dashed #007BFF; padding: 20px; text-align: center; }
-    """) as demo:
-    gr.Markdown("# AV-Captioner: Audio-Visual Speech Recognition")
-    gr.Markdown("Upload audio (.wav) and video (.mp4) files to generate captions in noisy or silent environments.")
-
-    with gr.Row():
-      audio_input = gr.Audio(label="Upload Audio File", type="filepath")
-      video_input = gr.Video(label="Upload Video File")
-
-      context_input = gr.Textbox(label="Context Hint (e.g., 'business meeting')", placeholder="general conversation")
-      generate_btn = gr.Button("Generate Captions")
-      output = gr.Textbox(label="Generated Captions", lines=5)
-
-      generate_btn.click(ui_generate_captions, inputs=[audio_input, video_input, context_input], outputs=output)
-
-    demo.launch(share=True)'''
